@@ -14,12 +14,14 @@ const useStyles = makeStyles(theme => ({
     leftPanel: {
         width: '50%',
         color: '#72c89e',
+        background: 'transparent'
     },
     rightPanel: {
         width: '50%',
         color: '#72c89e',
         textAlign: 'right',
-        order: 1
+        order: 1,
+        background: 'transparent'
     }
 }))
 

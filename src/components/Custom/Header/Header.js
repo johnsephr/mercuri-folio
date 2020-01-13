@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Link } from "react-router-dom"
+import { useMediaPredicate } from "react-media-hook";
 
 // MUI
 import { AppBar, Toolbar, Typography } from '@material-ui/core'
@@ -12,12 +12,23 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         height: 300,
         width: '100vw',
-        maxWidth: '1800px',
+        maxWidth: '1300px',
         margin: '0 auto',
         padding: '0 10%',
         backgroundColor: 'transparent',
         boxShadow: 'none',
         marginBottom: 95
+    },
+    rootMobile: {
+        display: 'flex',
+        height: 300,
+        width: '100vw',
+        maxWidth: '1300px',
+        margin: '0 auto',
+        padding: '0 10%',
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
+        marginBottom: 25
     },
     title: {
         color: 'black',
@@ -26,15 +37,18 @@ const useStyles = makeStyles(theme => ({
     },
     name: {
         color: '#72c89e',
-        fontSize: 40
+        fontSize: 35
     }
 }))
 
 const Header = props => {
     const classes = useStyles(props)
+    const biggerThan800 = useMediaPredicate("(min-width: 800px)");
+
     return (
-        <Fragment>
-            <AppBar
+        <div>
+            {/* Desktop Header */}
+            {biggerThan800 && <AppBar
                 position='static'
                 color='primary'
                 className={classes.root}
@@ -43,8 +57,21 @@ const Header = props => {
                     <span className={classes.name}>Michelle Gorski</span> is a <br />
                     UI/UX Design &amp; Researcher.
                 </Typography>
-            </AppBar>
-        </Fragment>
+            </AppBar>}
+            
+            {/* Mobile Header */}
+            {!biggerThan800 && <AppBar
+                position='static'
+                color='primary'
+                className={classes.rootMobile}
+            >
+                <Typography variant="h5" className={classes.title}>
+                    <span className={classes.name}>Michelle Gorski</span> is a <br />
+                    UI/UX Design &amp; Researcher.
+                </Typography>
+            </AppBar>}
+            
+        </div>
     )
 }
 

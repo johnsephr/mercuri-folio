@@ -3,8 +3,9 @@ import React, { Fragment } from 'react'
 // Icons
 import PhotoshopIcon from '../Icons/PhotoshopIcon'
 // import VeganEatsMobile from '../Icons/VeganEatsMobile'
-import figma from '../../../images/figma.jpeg'
+import figma from '../../../images/figma.svg'
 import satoshiMockup from '../../../images/satoshi-mockup.jpeg'
+import veganEats from '../../../images/vegan-eats.jpeg'
 
 // MUI
 import { Typography } from '@material-ui/core'
@@ -52,17 +53,17 @@ const useStyles = makeStyles(theme => ({
         display: 'inline-flex'
     },
     icon: {
-        marginRight: '20px'
+        marginRight: '30px'
     },
     iconReverse: {
-        marginLeft: '20px'
+        marginLeft: '30px'
     }
 }))
 
 const Project = props => {
     const classes = useStyles(props)
     const { project, index } = props
-    const { title, industry, summary, roles, icons } = project
+    const { title, industry, summary, roles, icons, image } = project
 
     return (
         <div>
@@ -75,7 +76,7 @@ const Project = props => {
                         <Typography className={classes.industry}>
                             {industry}
                         </Typography>
-                        <Typography className={classes.summary}>
+                        <Typography className={classes.summary} style={{ maxWidth: '250px' }}>
                             {summary}
                         </Typography>
                         <Typography className={classes.roles}>
@@ -83,7 +84,7 @@ const Project = props => {
                         </Typography>
 
                         <div className={classes.iconsContainer}>
-                            {icons.includes('figma') && <div className={classes.icon}><img src={figma} width="auto" height="30px" /></div>}
+                            {icons.includes('figma') && <div className={classes.icon}><img src={figma} width="auto" height="25px" /></div>}
                             {icons.includes('photoshop') && <PhotoshopIcon className={classes.icon} />}
                         </div>
                     </div>
@@ -92,7 +93,8 @@ const Project = props => {
                             justifyContent: 'flex-end',
                             transform: 'translateY(-120px)'
                         }}>
-                            <div style={{ marginLeft: 'auto', width: '500px' }}><img src={satoshiMockup} height="auto" width="500px" /></div>
+                            {image === 'satoshi' && <div style={{ marginLeft: 'auto', width: '300px', height: '400px', background: 'transparent' }}><img src={satoshiMockup} height="auto" width="300px" /></div>}
+                            {image ==='vegan-eats' && <div style={{ marginLeft: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={veganEats} height="auto" width="200px" /></div>}
                         </div>
                     </div>
                 </div> : <div className={classes.root}>
@@ -101,7 +103,8 @@ const Project = props => {
                             justifyContent: 'flex-start',
                             transform: 'translateY(-120px)'
                         }}>
-                            <img src={satoshiMockup} height="auto" width="500px" />
+                            {image === 'satoshi' && <div style={{ marginRight: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={satoshiMockup} height="auto" width="500px" /></div>}
+                            {image === 'vegan-eats' && <div style={{ marginRight: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={veganEats} height="auto" width="200px" /></div>}
                         </div>
                     </div>
                     <div className={classes.rightPanel}>
@@ -111,7 +114,7 @@ const Project = props => {
                         <Typography className={classes.industry} style={{ textAlign: 'right'}}>
                             {industry}
                         </Typography>
-                        <Typography className={classes.summary} style={{ textAlign: 'right'}}>
+                        <Typography className={classes.summary} style={{ textAlign: 'right', maxWidth: '250px', marginLeft: 'auto' }}>
                             {summary}
                         </Typography>
                         <Typography className={classes.roles} style={{ textAlign: 'right'}}>
@@ -119,7 +122,7 @@ const Project = props => {
                         </Typography>
 
                         <div className={classes.iconsContainer} style={{ float: 'right' }}>
-                            {icons.includes('figma') && <div className={classes.icon}><img src={figma} width="auto" height="30px" /></div>}
+                            {icons.includes('figma') && <div className={classes.icon}><img src={figma} width="auto" height="25px" /></div>}
                             {icons.includes('photoshop') && <PhotoshopIcon className={classes.iconReverse} />}
                         </div>
                     </div>

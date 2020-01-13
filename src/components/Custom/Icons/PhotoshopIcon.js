@@ -15,8 +15,8 @@ const PhotoshopIcon = props => {
     return (
         <Fragment>
             <svg
-                width="30px"
-                height="30px"
+                width="25px"
+                height="25px"
                 viewBox="0 130.746 595.279 580.398"
                 xmlns="http://www.w3.org/2000/svg"
             >

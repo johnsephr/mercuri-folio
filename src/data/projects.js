@@ -5,21 +5,16 @@ const projects = [
         summary: 'learn the basics of bitcoin while incrementally investing the smallest amount possible; a single unit of satoshi at a time.',
         roles: 'UI Design | UX Research',
         icons: ['figma', 'photoshop'],
+        image: 'satoshi'
     },
     {
-        title: 'vegans eat',
+        title: 'vegan eats',
         industry: 'mobile food locator',
         summary: 'the call for easy-locating of delicious plant-based fare has been answered.',
         roles: 'UI Design | UX Research',
         icons: ['figma', 'photoshop'],
-    },
-    // {
-    //     title: 'bbq bowl rox',
-    //     industry: 'bitcoin education & investment',
-    //     summary: 'summary',
-    //     roles: ['designer'],
-    //     icons: ['image paths go here...'],
-    // },
+        image: 'vegan-eats'
+    }
 ]
 
 export default projects

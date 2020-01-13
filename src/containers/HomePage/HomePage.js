@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     // styles go here
     root: {
         width: '100vw',
-        maxWidth: '1800px',
+        maxWidth: '1300px',
         margin: '0 auto',
         padding: '0 10%'
     }
