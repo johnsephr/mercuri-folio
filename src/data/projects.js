@@ -8,12 +8,12 @@ const projects = [
         image: 'satoshi'
     },
     {
-        title: 'vegan eats',
+        title: 'vegans eat',
         industry: 'mobile food locator',
         summary: 'the call for easy-locating of delicious plant-based fare has been answered.',
         roles: 'UI Design | UX Research',
         icons: ['figma', 'photoshop'],
-        image: 'vegan-eats'
+        image: 'vegans-eat'
     }
 ]
 

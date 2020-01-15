@@ -94,7 +94,7 @@ const Project = props => {
                             transform: 'translateY(-120px)'
                         }}>
                             {image === 'satoshi' && <div style={{ marginLeft: 'auto', width: '300px', height: '400px', background: 'transparent' }}><img src={satoshiMockup} height="auto" width="300px" /></div>}
-                            {image ==='vegan-eats' && <div style={{ marginLeft: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={veganEats} height="auto" width="200px" /></div>}
+                            {image ==='vegans-eat' && <div style={{ marginLeft: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={veganEats} height="auto" width="200px" /></div>}
                         </div>
                     </div>
                 </div> : <div className={classes.root}>
@@ -104,7 +104,7 @@ const Project = props => {
                             transform: 'translateY(-120px)'
                         }}>
                             {image === 'satoshi' && <div style={{ marginRight: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={satoshiMockup} height="auto" width="500px" /></div>}
-                            {image === 'vegan-eats' && <div style={{ marginRight: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={veganEats} height="auto" width="200px" /></div>}
+                            {image === 'vegans-eat' && <div style={{ marginRight: 'auto', width: '500px', height: '400px', background: 'transparent' }}><img src={veganEats} height="auto" width="200px" /></div>}
                         </div>
                     </div>
                     <div className={classes.rightPanel}>

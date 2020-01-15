@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+import React from 'react'
+import { useMediaPredicate } from "react-media-hook"
 
 // Components
 import BehanceIcon from '../../Custom/Icons/BehanceIcon'
@@ -24,6 +25,13 @@ const useStyles = makeStyles(theme => ({
         fontSize: '20px',
         cursor: 'pointer'
     },
+    leftPanelTextMobile: {
+        width: '100%',
+        color: '#72c89e',
+        fontSize: '20px',
+        cursor: 'pointer',
+        textAlign: 'center'
+    },
     centerPanel: {
         display: 'flex',
         alignItems: 'center',
@@ -40,11 +48,18 @@ const useStyles = makeStyles(theme => ({
         color: '#72c89e',
         textAlign: 'right',
         fontSize: '20px'
+    },
+    rightPanelTextMobile: {
+        width: '100%',
+        color: '#72c89e',
+        textAlign: 'center',
+        fontSize: '20px'
     }
 }))
 
 const Footer = props => {
     const classes = useStyles(props)
+    const biggerThan800 = useMediaPredicate("(min-width: 800px)")
 
     const openMail = () => {
         window.location.href = 'mailto:hello@mercuri.tech'
@@ -52,7 +67,7 @@ const Footer = props => {
 
     return (
         <div className={classes.root}>
-            <Grid
+            {biggerThan800 ? <Grid
                 container
                 direction='row'
                 alignContent='center'
@@ -78,8 +93,31 @@ const Footer = props => {
                         Austin, TX
                     </div>
                 </Grid>
-            </Grid>
-
+            </Grid> : <Grid
+                container
+                direction='row'
+                alignContent='center'
+                spacing={1}
+                className={classes.grid}
+            >
+                <Grid item xs={12} className={classes.leftPanel}>
+                    <div className={classes.leftPanelTextMobile} onClick={openMail} >
+                        {/* <button target='_blank' rel='noopener'> */}
+                            hello@mercuri.tech
+                        {/* </button> */}
+                    </div>
+                </Grid>
+                <Grid item xs={12} className={classes.rightPanel}>
+                    <div className={classes.rightPanelTextMobile}>
+                        Austin, TX
+                    </div>
+                </Grid>
+                <Grid item xs={12} className={classes.centerPanel}>
+                    <Link href='https://www.behance.net/mchllgorski' target='_blank' rel='noopener'>
+                        <BehanceIcon />
+                    </Link>
+                </Grid>
+            </Grid>}
         </div>
     )
 }

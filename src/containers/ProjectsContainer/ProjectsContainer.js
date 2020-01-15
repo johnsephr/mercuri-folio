@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { useMediaPredicate } from "react-media-hook";
+import { useMediaPredicate } from "react-media-hook"
 
 // MUI
 import { Typography } from '@material-ui/core'
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 
 const ProjectsContainer = props => {
     const classes = useStyles(props)
-    const biggerThan800 = useMediaPredicate("(min-width: 800px)");
+    const biggerThan800 = useMediaPredicate("(min-width: 800px)")
     return (
         <div className={classes.root}>
             {biggerThan800 ? <div>
