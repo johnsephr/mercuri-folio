@@ -26,13 +26,15 @@ const useStyles = makeStyles(theme => ({
     },
     title: {
         fontSize: 25,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        background: 'transparent'
     },
     industry: {
         fontSize: 18,
         fontWeight: 600,
         color: '#72c89e',
         opacity: .6,
+        background: 'transparent',
         marginTop: -5
     },
     summary: {
@@ -40,17 +42,20 @@ const useStyles = makeStyles(theme => ({
         color: '#111',
         fontFamily: 'Open Sans',
         fontWeight: 'regular',
+        background: 'transparent',
         marginTop: 10
     },
     roles: {
         fontSize: 15,
         fontWeight: 'bold',
         color: '#72c89e',
+        background: 'transparent',
         marginTop: 13
     },
     iconsContainer: {
         marginTop: 10,
-        display: 'inline-flex'
+        display: 'inline-flex',
+        background: 'transparent'
     },
     icon: {
         marginRight: '30px'
