@@ -21,7 +21,7 @@ const PhotoshopIcon = props => {
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <radialGradient id="a" cx="-183.69" cy="328.972" r=".76" gradientTransform="matrix(545.6736 0 0 528.3113 100439.305 -173525.125)" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#34364e" stop-opacity=".98" />
+                    <stop offset="0" stopColor="#34364e" stopOpacity=".98" />
                     <stop offset="1" stopColor="#0c0824" />
                 </radialGradient>
                 <path d="M24.803 155.549h545.674v530.792H24.803V155.549z" fill="url(#a)" />

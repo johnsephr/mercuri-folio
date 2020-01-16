@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React, { useEffect } from 'react'
 import { useMediaPredicate } from "react-media-hook";
 
 // Icons
@@ -78,17 +78,21 @@ const ProjectMobile = props => {
     const { title, industry, summary, roles, icons, image } = project
     const biggerThan485 = useMediaPredicate("(min-width: 485px)");
 
+    useEffect(() => {
+        console.log(veganEats)
+    })
+
     return (
         <div className={classes.root}>
             {/* In Between Desktop & Mobile */}
             {biggerThan485 && <div className={classes.imageContainer}>
                     {image === 'satoshi' && <div className={classes.image}><img src={satoshiMockup} height="500px" width="auto" /></div>}
-                    {image === 'vegan-eats' && <div className={classes.image}><img src={veganEats} height="500px" width="auto" /></div>}
+                    {image === 'vegans-eat' && <div className={classes.image}><img src={veganEats} height="500px" width="auto" /></div>}
             </div>}
             {/* Mobile */}
             {!biggerThan485 && <div className={classes.imageContainer}>
                     {image === 'satoshi' && <div className={classes.image}><img src={satoshiMockup} height="350px" width="auto" /></div>}
-                    {image === 'vegan-eats' && <div className={classes.image}><img src={veganEats} height="350px" width="auto" /></div>}
+                    {image === 'vegans-eat' && <div className={classes.image}><img src={veganEats} height="350px" width="auto" /></div>}
             </div>}
            
             <div className={classes.info}>
