@@ -4,9 +4,12 @@ import { useMediaPredicate } from "react-media-hook";
 // Icons
 import PhotoshopIcon from '../Icons/PhotoshopIcon'
 // import VeganEatsMobile from '../Icons/VeganEatsMobile'
+
+// images
 import figma from '../../../images/figma.svg'
 import satoshiMockup from '../../../images/satoshi-mockup.jpeg'
 import veganEats from '../../../images/vegan-eats.jpeg'
+import press from '../../../images/press.jpeg'
 
 // MUI
 import { Typography } from '@material-ui/core'
@@ -88,11 +91,13 @@ const ProjectMobile = props => {
             {biggerThan485 && <div className={classes.imageContainer}>
                     {image === 'satoshi' && <div className={classes.image}><img src={satoshiMockup} height="500px" width="auto" /></div>}
                     {image === 'vegans-eat' && <div className={classes.image}><img src={veganEats} height="500px" width="auto" /></div>}
+                    {image === 'press' && <div className={classes.image}><img src={press} height="500px" width="auto" /></div>}
             </div>}
             {/* Mobile */}
             {!biggerThan485 && <div className={classes.imageContainer}>
                     {image === 'satoshi' && <div className={classes.image}><img src={satoshiMockup} height="350px" width="auto" /></div>}
                     {image === 'vegans-eat' && <div className={classes.image}><img src={veganEats} height="350px" width="auto" /></div>}
+                    {image === 'press' && <div className={classes.image}> <img src={press} height="350px" width="auto" /></div>}
             </div>}
            
             <div className={classes.info}>

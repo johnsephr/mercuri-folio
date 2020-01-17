@@ -1,5 +1,13 @@
 const projects = [
     {
+        title: 'press',
+        industry: 'mobile laundry service',
+        summary: 'laundry and dry cleaning delivered for less. all delivered by your local, trusted cleaner.',
+        roles: 'UI Design | UX Research',
+        icons: ['figma', 'photoshop'],
+        image: 'press'
+    },
+    {
         title: 'satoshi',
         industry: 'bitcoin education & investment',
         summary: 'learn the basics of bitcoin while incrementally investing the smallest amount possible; a single unit of satoshi at a time.',

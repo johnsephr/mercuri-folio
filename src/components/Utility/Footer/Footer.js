@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     // styles go here
     root: {
         display: 'flex',
-        margin: '50px 0'
+        margin: '100px 0 50px 0'
     },
     leftPanel: {
         display: 'flex',
